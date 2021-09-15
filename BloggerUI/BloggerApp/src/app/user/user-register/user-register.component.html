@@ -1,0 +1,26 @@
+<form [formGroup]="registerFormGroup">
+  <div class="form-group">
+    <label for="exampleInputName">Name</label>
+    <input type="name" class="form-control" id="exampleInputName" aria-describedby="phoneHelp" placeholder="Enter Name"
+      formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Enter email" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPhone">Phone</label>
+    <input type="phone" class="form-control" id="exampleInputPhone" aria-describedby="emailHelp"
+      placeholder="Enter Phone" formControlName="phone">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+      formControlName="password">
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary mr-1" (click)="userRegister()">Submit</button>
+    <button type="cancel" class="btn btn-primary mr-1" (click)="userCancel()">Cancel</button>
+  </div>
+</form>

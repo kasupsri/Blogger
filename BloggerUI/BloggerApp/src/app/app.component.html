@@ -1,0 +1,39 @@
+<div class="container">
+
+    <h3 class="d-flex justify-content-center">Blogger Application </h3>
+    <h5 class="d-flex justify-content-center">Demo Application</h5>
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <button routerLink="home" routerLinkActive="active" class="m-1 btn btn-light btn-outline-primary" Button>Home</button>
+            </li>
+
+            <li class="nav-item" *ngIf="!isUserloggedin">
+                <button routerLink="register"  routerLinkActive="active"  class="m-1 btn btn-light btn-outline-primary" Button>User
+                    Register</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="blog" routerLinkActive="active" class="m-1 btn btn-light btn-outline-primary" Button>My Blogs</button>
+            </li>
+
+            <li class="nav-item" *ngIf="isUserloggedin">
+                <button routerLink="user"  routerLinkActive="active" class="m-1 btn btn-light btn-outline-primary" Button>My Profile</button>
+            </li>
+
+            <li class="nav-item" *ngIf="!isUserloggedin">
+                <button routerLink="login"  routerLinkActive="active" class="m-1 btn btn-light btn-outline-primary" Button>Log In</button>
+            </li>
+
+            <li class="nav-item" *ngIf="isUserloggedin">
+                <button (click)="userLogout()"  routerLinkActive="active" class="m-1 btn btn-light btn-outline-primary" Button>Log Out</button>
+            </li>
+
+        </ul>
+    </nav>
+
+    <router-outlet></router-outlet>
+
+</div>
