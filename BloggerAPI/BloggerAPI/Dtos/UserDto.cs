@@ -42,6 +42,7 @@ namespace BloggerAPI.Dtos
         [Required]
         public string Name { get; init; }
         [Required]
+        [EmailAddress]
         public string Email { get; init; }
         [Required]
         public string Phone { get; init; }
@@ -57,6 +58,7 @@ namespace BloggerAPI.Dtos
             Password = password;
         }
         [Required]
+        [EmailAddress]
         public string Email { get; init; }
         [Required]
         public string Password { get; init; }

@@ -27,7 +27,7 @@ namespace BloggerAPI.Models
         [Column(TypeName = "bit")]
         public bool IsPublished { get; set; }
 
-        [ForeignKey("userId")]
+        [Column(TypeName ="int")]
         public int UserId { get; set; }
     }
 }
